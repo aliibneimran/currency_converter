@@ -1,0 +1,120 @@
+#currency-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 30%;
+  background: linear-gradient(135deg, #4f46e5, #6d28d9);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+#currency-btn:hover {
+  transform: scale(1.1);
+}
+
+#currency-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(6px);
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 9998;
+  justify-content: center;
+  align-items: center;
+}
+
+#currency-modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+  font-family: "Segoe UI", sans-serif;
+}
+
+@keyframes fadeIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  color: #444;
+}
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #4f46e5;
+}
+
+input[type="number"],
+select {
+  width: 95%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+input:focus,
+select:focus {
+  border-color: #6d28d9;
+  box-shadow: 0 0 0 3px rgba(109, 40, 217, 0.1);
+}
+
+.select-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.select-group span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+button[type="submit"] {
+  background: #4f46e5;
+  color: white;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #6d28d9;
+}
+
+#result {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
